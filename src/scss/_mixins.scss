@@ -11,7 +11,7 @@
   position: relative;
   display: inline-block;
   color: $text-color;
-  border-radius: 8px;
+  border-radius: 6px;
 
   @if $setbg {
     background-color: rgba(255, 255, 255, 0.3);
@@ -20,7 +20,7 @@
   & > i {
     font-size: 18px;
     @if $small{
-      margin: 1px;
+      margin: 0.01rem;
     } @else {
       margin: 7px;
     }
@@ -36,6 +36,29 @@
     } @else {
       background: rgba(255, 255, 255, 0.15);
     }
+    cursor: pointer;
+  }
+}
+
+
+@mixin util_button() {
+  height: 100px;
+  min-width: 100px;
+  padding: 3px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.8);
+
+  & > span {
+    font-size: 5rem;
+    margin: 7px;
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.3) ;
     cursor: pointer;
   }
 }

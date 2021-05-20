@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Task Tracker</title>
+</head>
+<body class="board">
+  <div class="app">
+
+    <div class="task-tracker">
+
+      <div class="board-header">
+        
+        <div>
+          <div class="button">
+            <i class="material-icons" title="Back to menu">home</i>
+          </div>  
+
+          <div class="button">
+            <i class="material-icons" title="Settings">settings</i>
+          </div>
+        </div>  
+        
+          <div class="board-name" title="Name of the board">Board 1</div>
+          
+        <div class="button-delete">
+          <i class="material-icons" title="Delete this board">delete_forever</i>
+        </div>
+
+      </div>
+
+      <div class="card-area">
+        <div class="row-element">
+          <div class="list">
+          <div class="list__edit">
+            <div class="list__title" contenteditable>
+              To do
+            </div>
+            <div class="button-actions">
+              <i class="material-icons">more_horiz</i>
+            </div>
+          </div>
+            <div class="list__card">
+              <input type="text" class="list__card-text" value="Finish css layout" spellcheck="false">
+            </div>
+            <div class="list__card">
+              <input type="text" class="list__card-text" value="Something" spellcheck="false">
+            </div>
+            <div class="list__card">
+              <input type="text" class="list__card-text" value="ddd" spellcheck="false">
+            </div>
+            <div class="list__add-card">
+              <span class="add">+</span> Add a card
+            </div>
+          </div>
+        </div>
+        <div class="row-element">
+          <div class="list">
+          <div class="list__edit">
+            <div class="list__title" contenteditable>
+             Not To do
+            </div>
+            <div class="button-actions">
+              <i class="material-icons">more_horiz</i>
+            </div>
+          </div>
+            <div class="list__card">
+              <input type="text" class="list__card-text" value="sleep" spellcheck="false">
+            </div>
+            <div class="list__add-card">
+              <span class="add">+</span> Add a card
+            </div>
+          </div>
+        </div>
+
+        <div class="row-element">
+          <div class="empty-list">
+            <div class="add-list">  
+              <span class="add">+</span> Add a list
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</body>
+</html>

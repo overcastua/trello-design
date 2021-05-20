@@ -1,0 +1,17 @@
+@import "vars";
+@import "mixins";
+
+.home {
+  &__utils {
+    position: absolute;
+    top: $header-height;
+    height: $util-height;
+    display: flex;
+    margin: 50px 0;
+    justify-content: center;
+    width: 100%;
+  }
+  &__add-board {
+    @include util_button();
+  }
+}
