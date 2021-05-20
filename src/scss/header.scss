@@ -1,0 +1,36 @@
+@import "vars";
+@import "mixins";
+
+
+.board-header {
+  position:fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: $header-height;
+  padding: 4px 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .05);
+
+  .board-name {
+    font-size: 1.5rem; 
+    color: wheat; 
+    opacity: 0.6;
+    cursor: default;
+    user-select: none;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .button-delete {
+    @include button(red);    
+  }
+  
+  .button {
+    @include button(none);    
+  }
+}

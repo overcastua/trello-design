@@ -1,0 +1,41 @@
+@mixin button($color: white, $setbg: true, $text-color: rgba(255, 255, 255, 1), $small: false){
+  @if $small{
+    height: 24px;
+    min-width: 24px;
+  } @else {
+    height: 36px;
+    min-width: 36px;
+  }
+  padding: 3px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  color: $text-color;
+  border-radius: 8px;
+
+  @if $setbg {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  & > i {
+    font-size: 18px;
+    @if $small{
+      margin: 1px;
+    } @else {
+      margin: 7px;
+    }
+  }
+
+  &:active, &.active {
+    color: $color;
+  }
+
+  &:hover {
+    @if $small{
+      background: rgba(0, 0, 0, 0.15) ;
+    } @else {
+      background: rgba(255, 255, 255, 0.15);
+    }
+    cursor: pointer;
+  }
+}
