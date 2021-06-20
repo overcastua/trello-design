@@ -150,7 +150,6 @@ export class CardArea extends TrelloComponent {
   }
 
   onDragstart(event) {
-    console.log('start')
     setTimeout(() => {
       this.$root
         .findOne(`[data-card="${event.target.dataset.drag}"]`)
@@ -208,6 +207,9 @@ export class CardArea extends TrelloComponent {
       const closest = $(event.target).closest('[data-param="extendable"]')
       if (closest.$el) {
         closest.append(this.selected.$el)
+      } else {
+        console.log('d')
+        event.preventDefault()
       }
     }
   }
