@@ -1,8 +1,8 @@
+/* eslint-disable indent */
 class Dom {
   constructor(selector) {
-    this.$el = typeof selector === 'string' ?
-      document.querySelector(selector) :
-      selector
+    this.$el =
+      typeof selector === 'string' ? document.querySelector(selector) : selector
   }
 
   html(html) {
@@ -65,16 +65,14 @@ class Dom {
   }
 
   css(styles = {}) {
-    Object
-        .keys(styles)
-        .forEach(key => {
-          this.$el.style[key] = styles[key]
-        })
+    Object.keys(styles).forEach((key) => {
+      this.$el.style[key] = styles[key]
+    })
     return this
   }
 
   replace(selector, content) {
-    return document.querySelector(selector).parentNode.outerHTML = content
+    return (document.querySelector(selector).parentNode.outerHTML = content)
   }
 
   remove() {
@@ -87,14 +85,27 @@ class Dom {
   }
 
   setSpanValue(selector, text) {
-    return this.findOne(selector).$el.innerText = text
+    return (this.findOne(selector).$el.innerText = text)
   }
 
   setInputValue(selector, text) {
-    return this.findOne(selector).$el.value = text
+    return (this.findOne(selector).$el.value = text)
   }
   getInputValue(selector) {
     return this.findOne(selector).$el.value
+  }
+
+  setAttribute(attr, val) {
+    console.log(this.$el)
+    return this.$el.setAttribute(attr, val)
+  }
+
+  addClass(className) {
+    return this.$el.classList.add(className)
+  }
+
+  removeClass(className) {
+    return this.$el.classList.remove(className)
   }
 
   focus() {

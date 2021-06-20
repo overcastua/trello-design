@@ -1,9 +1,9 @@
-@import "vars";
-@import "mixins";
+@import 'vars';
+@import 'mixins';
 
 .tracker {
   &__board-header {
-    position:fixed;
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
@@ -12,11 +12,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, .05);
+    background-color: rgba(0, 0, 0, 0.05);
 
     .board-name {
-      font-size: 1.5rem; 
-      color: wheat; 
+      font-size: 1.5rem;
+      color: wheat;
       opacity: 0.6;
       cursor: default;
 
@@ -26,11 +26,11 @@
     }
 
     .button-delete {
-      @include button(red);    
+      @include button(red);
     }
-    
+
     .button {
-      @include button(none);    
+      @include button(none);
     }
   }
 }

@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-@import "~normalize.css";
+@import '~normalize.css';
 
-@import "header";
-@import "desk";
-@import "home_header";
-@import "utils";
-@import "boards";
-
+@import 'header';
+@import 'desk';
+@import 'home_header';
+@import 'utils';
+@import 'boards';
 
 * {
   margin: 0;
@@ -18,10 +17,12 @@ body {
   font-family: 'Roboto', sans-serif;
   background-image: url();
   font-size: 14px;
+  user-select: none;
 }
 
 .board {
-  background: url(http://images2.fanpop.com/images/photos/7800000/Nature-Full-HD-Wallpaper-national-geographic-7822379-1920-1080.jpg) no-repeat center center fixed; 
+  background: url(http://images2.fanpop.com/images/photos/7800000/Nature-Full-HD-Wallpaper-national-geographic-7822379-1920-1080.jpg)
+    no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -29,16 +30,15 @@ body {
 }
 
 .home {
-  background: url(https://images.hdqwalls.com/download/material-design-metal-colors-4k-n8-1920x1080.jpg) no-repeat center center fixed; 
+  background: url(https://images.hdqwalls.com/download/material-design-metal-colors-4k-n8-1920x1080.jpg)
+    no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
-
-
-html { 
+html {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;

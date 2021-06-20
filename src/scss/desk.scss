@@ -1,19 +1,45 @@
-@import "vars";
-@import "mixins";
+@import 'vars';
+@import 'mixins';
 
 .row-element {
   display: inline-block;
   vertical-align: top;
 }
 
+.delete-area {
+  display: none;
+  background-color: rgba(255, 0, 0, 0.35);
+  top: 100vh;
+  height: 20vh;
+  transform: translateY(-100%);
+  width: 100%;
+  position: fixed;
+  border-top: 1px solid white;
+  padding: 5%;
+  & > span {
+    font-size: 50px;
+    display: table;
+    margin: 0 auto;
+    width: fit-content;
+  }
+}
+
+.delete-area.trash-hovered {
+  background-color: rgba(255, 0, 0, 0.6);
+  & > span {
+    color: white;
+  }
+}
+
 .tracker {
   &__card-area {
-    position:absolute;
+    position: absolute;
     top: $header-height;
     right: 0;
     left: 0;
+    height: 100vh;
     white-space: nowrap;
-    
+
     .empty-list {
       min-width: 200px;
       margin: 10px 5px;
@@ -37,16 +63,27 @@
 
     .list {
       max-width: 240px;
-      min-height: 40px;
+      min-height: 10px;
       min-width: 240px;
       margin: 10px 0 10px 5px;
       padding: 10px 5px;
       border-radius: 4px;
-      background-color: rgba(255, 255, 255, .85);
+      background-color: rgba(255, 255, 255, 0.85);
 
-      &__cards{
+      &__cards {
         overflow-y: auto;
+        height: fit-content;
+        min-height: 10px;
         max-height: 300px;
+      }
+
+      &__cards.highlight {
+        border: 2px solid lightblue;
+        min-height: 85px !important;
+        background-color: rgba(255, 255, 255, 0.55);
+      }
+      &__cards.hovered {
+        border-color: green;
       }
 
       &__edit {
@@ -55,7 +92,7 @@
       }
       &__title {
         padding: 2px 5px;
-        width: 100% ;
+        width: 100%;
         font-weight: bold;
         cursor: pointer;
         &:focus {
@@ -73,44 +110,49 @@
           font-size: 18px;
           margin: auto 2px;
           .dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
+            background-color: #3498db;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+          }
 
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
-}
+          .dropbtn:hover,
+          .dropbtn:focus {
+            background-color: #2980b9;
+          }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
+          .dropdown {
+            position: relative;
+            display: inline-block;
+          }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+          }
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
+          .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+          }
 
-.dropdown a:hover {background-color: #ddd;}
+          .dropdown a:hover {
+            background-color: #ddd;
+          }
 
-.show {display: block;}
-          @include button(none, false, rgba(120, 120, 120, .75), true);
+          .show {
+            display: block;
+          }
+          @include button(none, false, rgba(120, 120, 120, 0.75), true);
         }
       }
 
@@ -120,13 +162,13 @@
         white-space: pre-line;
         cursor: pointer;
         background: white;
-        opacity: .8;
-        width: 80%;  
+        opacity: 0.8;
+        width: 80%;
         height: fit-content;
         border-radius: 4px;
         border: none;
         box-shadow: 0 2px 5px 2px rgba(60, 64, 67, 0.15);
-  
+
         &:focus {
           cursor: text;
           outline: none;
@@ -139,9 +181,9 @@
         border: none;
         border-radius: 8px;
         width: 100%;
-        &:focus { 
+        &:focus {
           cursor: text;
-          outline-color:rgba(0, 0, 255, 0.6);
+          outline-color: rgba(0, 0, 255, 0.6);
         }
       }
 
@@ -161,20 +203,20 @@
         .add {
           font-size: 1.1rem;
         }
-      
+
         position: relative;
         width: 100%;
         border-radius: 4px;
-        color: rgba(0, 0, 0, .5);
-      
+        color: rgba(0, 0, 0, 0.5);
+
         &:hover {
-          background: rgba(0, 0, 0, .15);
+          background: rgba(0, 0, 0, 0.15);
           cursor: pointer;
         }
       }
 
       .button-actions {
-        @include button(none, false, rgba(120, 120, 120, .75), true);
+        @include button(none, false, rgba(120, 120, 120, 0.75), true);
       }
     }
   }
